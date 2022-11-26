@@ -24,7 +24,8 @@ module "ec2_instance" {
     http_tokens = "required",
   }
 
-  iam_instance_profile = var.instance_profile_role == null ? null : aws_iam_instance_profile.instance_profile[0].name
+  #iam_instance_profile = var.instance_profile_role == null ? null : aws_iam_instance_profile.instance_profile[0].name
+  iam_instance_profile = aws_iam_role.instance_role.name
 
   user_data = var.user_data
   tags      = var.tags
