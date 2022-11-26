@@ -17,7 +17,7 @@ variable "is_spot_instance" {
 
 variable "security_group_ids" {
   type    = list(string)
-  default = []
+  default = null
 }
 
 variable "subnet_id" {
