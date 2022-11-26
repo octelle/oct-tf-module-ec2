@@ -1,6 +1,6 @@
 resource "aws_iam_role" "instance_role" {
-  name        = "${var.name}_instance_${var.environment}"
-  description = "Instance role to provision ${var.name} in the ${var.environment} environment"
+  name        = "${var.name}_instance_"
+  description = "Instance role to provision ${var.name}"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
