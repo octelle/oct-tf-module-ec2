@@ -11,7 +11,7 @@ module "ec2_instance" {
   subnet_id              = var.subnet_id
 
   monitoring    = true
-  ebs_optimized = true
+  #ebs_optimized = true
 
   root_block_device = [merge(
     var.root_block_device,
